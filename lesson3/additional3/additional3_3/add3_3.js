@@ -4,26 +4,24 @@
 // let arr = [];
 //
 // let num = 0;
-// for (let i = 0; i < 50; i++) {
+// for (let i = 0; i < 100; i++) {
 //     if (num % 2 === 0)
-//         arr[i] = num;
+//         arr[arr.length] = num;
 //     num++;
 // }
 // console.log(arr);
 
 //     b. заповнити його 50 непарними числами за допомоги циклу.
 
-// let arrFirst=[];
-// let arrSecond=[];
-// for (let i = 0; i <= 50; i++) {
-//    if (i%2===0){
-//        arrFirst[i]=i;
-//    }else
-//        arrSecond[i]=i;
+// let arr = [];
 //
+// let num = 0;
+// for (let i = 0; i < 100; i++) {
+//     if (num % 2 === 1)
+//         arr[arr.length] = num;
+//     num++;
 // }
-// console.log(arrFirst);
-// console.log(arrSecond);
+// console.log(arr);
 
 //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
 
@@ -163,20 +161,19 @@ let citiesWithId = [
 //
 //
 
-// let arr = [];
-//
-// for (let i = 0; i < usersWithId.length; i++) {
-//     arr.push(usersWithId[i]);
-//
-// }
-//
-// for (let i = 0; i < citiesWithId.length; i++) {
-//     if (citiesWithId[i].user_id===arr[i].id){
-//         arr=citiesWithId.concat(arr);
-//     }
-// }
-// console.log(arr);
+let arr = [];
 
+for (const user of usersWithId) {
+    for (const city of citiesWithId) {
+        if (user.id === city.user_id){
+            user.address = city;
+        }
+    }
+
+}
+arr = usersWithId;
+arr.push(usersWithId);
+console.log(arr);
 //
 //
 // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
