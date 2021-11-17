@@ -172,7 +172,6 @@ for (const user of usersWithId) {
 
 }
 arr = usersWithId;
-arr.push(usersWithId);
 console.log(arr);
 //
 //
