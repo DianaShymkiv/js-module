@@ -161,18 +161,18 @@ let citiesWithId = [
 //
 //
 
-let arr = [];
-
-for (const user of usersWithId) {
-    for (const city of citiesWithId) {
-        if (user.id === city.user_id){
-            user.address = city;
-        }
-    }
-
-}
-arr = usersWithId;
-console.log(arr);
+// let arr = [];
+//
+// for (const user of usersWithId) {
+//     for (const city of citiesWithId) {
+//         if (user.id === city.user_id){
+//             user.address = city;
+//         }
+//     }
+//
+// }
+// arr = usersWithId;
+// console.log(arr);
 //
 //
 // - Взяти масив з 10 чисел або створити його. Вивести в консоль тільки ті елементи, значення яких є парними.
