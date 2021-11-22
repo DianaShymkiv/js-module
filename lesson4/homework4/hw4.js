@@ -17,8 +17,7 @@
 // - створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
 
 // function area(h, r) {
-//     let PI = 3.14;
-//     return Math.round(2 * PI * h * r);
+//     return Math.round(2 * Math.PI * h * r);
 // }
 //
 // console.log(area(5, 3));

@@ -33,7 +33,7 @@ function arrFunction() {
 }
 
 let arr = arrFunction();
-
+console.log(arr);
 
 // function maxNumber() {
 //     let max = arr[0];
@@ -138,7 +138,7 @@ let arr = arrFunction();
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
 
 // let arr = [1, 2, 3];
-//
+
 // function reverseArr(arr) {
 //     let arrReverse = [];
 //     arrReverse = arr.reverse();
@@ -146,3 +146,24 @@ let arr = arrFunction();
 // }
 //
 // console.log(reverseArr(arr));
+
+// function reverseArr(array) {
+//     let newArr = [];
+//     for (let i = array.length - 1; i >= 0; i--) {
+//         newArr.push(array[i]);
+//     }
+//     return newArr;
+// }
+//
+// console.log(reverseArr(arr));
+
+// function reverseArr(array) {
+//     let newArr = [];
+//     for (let i = array.length - 1, ri = 0; i >= 0, ri < array.length; i--, ri++) {
+//         newArr[ri] = array[i];
+//     }
+//     return newArr;
+// }
+//
+// console.log(reverseArr(arr));
+
