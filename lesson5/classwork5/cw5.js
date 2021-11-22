@@ -88,17 +88,17 @@ console.log(arr);
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
 
-// const numbers = (newArr) => {
-//     let min = newArr[0];
-//     let max = newArr[0];
-//     for (const number of newArr) {
+// const numbers = (...arr) => {
+//     let min = arr[0];
+//     let max = arr[0];
+//     for (const number of arr) {
 //         if (number < min) min = number;
 //         if (number > max) max = number;
 //     }
 //     console.log(`Max number is`, max);
 //     return min;
 // }
-// console.log(`Min number is `, numbers(arr));
+// console.log(`Min number is `, numbers(4,5,2,1,0));
 
 // - створити функцію яка заповнює масив рандомними числами
 // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
