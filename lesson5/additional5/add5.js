@@ -61,22 +61,22 @@
 // [0,1,2,3,4] => [1,2,3,4,0]
 // [0,0,1,0]   => [1,0,0,0]
 
-// const arrFunction = (length) => {
-//     let array = [];
-//     if (length <= 100 && length >= 2) {
-//         for (let i = 0; i < length; i++) {
-//             array[i] = +prompt(`enter the number of the array`);
-//
-//         }
-//     } else {
-//         alert(`enter a number for 2 to 100`);
-//     }
-//     return array;
-// }
-//
-// let array = arrFunction(prompt(`enter the length of the array`));
-// console.log(array);
-//
+const arrFunction = (length) => {
+    let array = [];
+    if (length <= 100 && length >= 2) {
+        for (let i = 0; i < length; i++) {
+            array[i] = +prompt(`enter the number of the array`);
+
+        }
+    } else {
+        alert(`enter a number for 2 to 100`);
+    }
+    return array;
+}
+
+let array = arrFunction(prompt(`enter the length of the array`));
+console.log(array);
+
 // const zeroFunction = (arr) => {
 //     let zeroArr = [];
 //     let numberArr = [];
@@ -89,5 +89,22 @@
 //         }
 //     }
 //     return numberArr.concat(zeroArr);
+// }
+// console.log(zeroFunction(array));
+
+// const zeroFunction = (arr) => {
+//     debugger;
+//     let x = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] !== 0) {
+//             arr[x++] = arr[i];
+//         }
+//
+//     }
+//     for (let i = x; i < arr.length; i++) {
+//         arr[i] = 0;
+//
+//     }
+//     return arr;
 // }
 // console.log(zeroFunction(array));
