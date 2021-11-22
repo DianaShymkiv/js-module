@@ -108,3 +108,43 @@ console.log(array);
 //     return arr;
 // }
 // console.log(zeroFunction(array));
+
+const zeroFunction = (arr) => {
+    debugger;
+    let newArr = [];
+    let countZero = 0;
+    let index = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] ? newArr[index++] = arr[i] : countZero++;
+        // check whether arr[i] === true or false, if arr[i] = 0 - false , any other number arr[i] - true
+    }
+
+    const nextIndex = newArr.length;
+
+    for (let i = nextIndex; i < nextIndex + countZero; i++) {
+        newArr[i] = 0;
+
+    }
+    return newArr;
+}
+console.log(zeroFunction(array));
+
+// const task4 = (arr) => {
+//     const newArr = [];
+//     let countZero = 0
+//     let index = 0
+//
+//     for (let i = 0; i < arr.length; i++) {
+//         arr[i] ? newArr[index++] = arr[i] : countZero++
+//     }
+//
+//     const nextIndex = newArr.length;
+//
+//     for (let i = nextIndex; i < nextIndex + countZero; i++) {
+//         newArr[i] = 0
+//     }
+//
+//     return newArr;
+// }
+// console.log(task4(array))
