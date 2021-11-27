@@ -41,6 +41,16 @@
 //
 // emailValidator(`someeMAIL@i.ua`);
 
+// let emailValidator = (email) => {
+//     let arr = email.split(`@`);
+//     let newArr = arr[1].split(`.`);
+//     if (arr[0] === '' || arr[0].includes(`.`) || arr[0].length <= 2)
+//         console.log(`Email is invalid`);
+//     else console.log(`Email - ` + email + `- is valid`);
+// }
+//
+// emailValidator(`some.email@gmail.com`);
+
 // - є масив
 
 let coursesArray = [
