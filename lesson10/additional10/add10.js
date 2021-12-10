@@ -52,70 +52,153 @@ let usersWithAddress = [
 // 3й - оставляет тех у кого город киев
 // Данные выводить в документ
 
-let form = document.createElement("div");
+// let form = document.createElement("div");
+//
+// let checkStatus = document.createElement('input');
+// checkStatus.setAttribute('type', 'checkbox');
+//
+// let checkAge = document.createElement('input');
+// checkAge.setAttribute('type', 'checkbox');
+//
+// let checkCity = document.createElement('input');
+// checkCity.setAttribute('type', 'checkbox');
+//
+// let button = document.createElement('button');
+// button.innerText = 'check';
+//
+// document.body.appendChild(form);
+// form.append(checkStatus, checkAge, checkCity, button);
+//
+// button.onclick = function (e) {
+//     let status = checkStatus.checked;
+//     let age = checkAge.checked;
+//     let city = checkCity.checked;
+//     let arr = [];
+//
+//     if (status && age && city) {
+//         arr = usersWithAddress.filter(value => value.status && value.age >= 29 && value.address.city === 'Kyiv');
+//     } else if (status && age) {
+//         arr = usersWithAddress.filter(value => value.status && value.age >= 29);
+//     } else if (status && city) {
+//         arr = usersWithAddress.filter(value => value.status && value.address.city === 'Kyiv');
+//     } else if (age && city) {
+//         arr = usersWithAddress.filter(value => value.age >= 29 && value.address.city === 'Kyiv');
+//     } else if (status) {
+//         arr = usersWithAddress.filter(value => value.status);
+//     } else if (age) {
+//         arr = usersWithAddress.filter(value => value.age >= 29);
+//     } else if (city) {
+//         arr = usersWithAddress.filter(value => value.address.city === 'Kyiv');
+//     }
+//
+//     let div = document.createElement("div");
+//     document.body.appendChild(div);
+//
+//     let ul = document.createElement("ul");
+//     div.appendChild(ul);
+//
+//     for (const user of arr) {
+//         for (const key in user) {
+//             if (typeof user[key] === 'object') {
+//                 for (const key1 in user[key]) {
+//                     let li = document.createElement('li');
+//                     li.innerText = `${key1} ${user[key][key1]}`;
+//                     ul.appendChild(li);
+//                 }
+//             } else {
+//                 let li = document.createElement('li');
+//                 li.innerText = `${key} ${user[key]}`;
+//                 ul.appendChild(li);
+//
+//             }
+//         }
+//
+//     }
+//
+// }
 
-let checkStatus = document.createElement('input');
-checkStatus.setAttribute('type', 'checkbox');
+const userSort = (users) => {
 
-let checkAge = document.createElement('input');
-checkAge.setAttribute('type', 'checkbox');
-
-let checkCity = document.createElement('input');
-checkCity.setAttribute('type', 'checkbox');
-
-let button = document.createElement('button');
-button.innerText = 'check';
-
-document.body.appendChild(form);
-form.append(checkStatus, checkAge, checkCity, button);
-
-button.onclick = function (e) {
-    let status = checkStatus.checked;
-    let age = checkAge.checked;
-    let city = checkCity.checked;
-    let arr = [];
-
-    if (status && age && city) {
-        arr = usersWithAddress.filter(value => value.status && value.age >= 29 && value.address.city === 'Kyiv');
-    } else if (status && age) {
-        arr = usersWithAddress.filter(value => value.status && value.age >= 29);
-    } else if (status && city) {
-        arr = usersWithAddress.filter(value => value.status && value.address.city === 'Kyiv');
-    } else if (age && city) {
-        arr = usersWithAddress.filter(value => value.age >= 29 && value.address.city === 'Kyiv');
-    } else if (status) {
-        arr = usersWithAddress.filter(value => value.status);
-    } else if (age) {
-        arr = usersWithAddress.filter(value => value.age >= 29);
-    } else if (city) {
-        arr = usersWithAddress.filter(value => value.address.city === 'Kyiv');
-    }
-
-    let div = document.createElement("div");
-    document.body.appendChild(div);
-
-    let ul = document.createElement("ul");
-    div.appendChild(ul);
-
-    for (const user of arr) {
+    for (const user of [...users]) {
+        let div = document.createElement('div');
+        let hr = document.createElement('hr');
         for (const key in user) {
             if (typeof user[key] === 'object') {
                 for (const key1 in user[key]) {
-                    let li = document.createElement('li');
-                    li.innerText = `${key1} ${user[key][key1]}`;
-                    ul.appendChild(li);
+                    let divAddress = document.createElement('div');
+                    divAddress.innerText = `${key1} : ${user[key][key1]}`;
+                    div.appendChild(divAddress);
+                    div.appendChild(hr);
+
                 }
             } else {
-                let li = document.createElement('li');
-                li.innerText = `${key} ${user[key]}`;
-                ul.appendChild(li);
-
+                let divUser = document.createElement('div');
+                divUser.innerText = `${key} : ${user[key]}`;
+                div.appendChild(divUser);
+                div.appendChild(hr);
             }
         }
 
+        document.body.appendChild(div);
+    }
+}
+
+const filterArray = (users) => {
+    let newArr = users;
+    let forma = document.createElement('form');
+    forma.style.width = '100%';
+    let checkFalse = document.createElement('input');
+    checkFalse.type = 'checkbox';
+    checkFalse.title = 'Status False';
+    checkFalse.style.display = 'block';
+    checkFalse.onchange = () => {
+        if (checkFalse.checked) {
+            newArr =  newArr.filter((user) => user.status === false);
+            let title = document.createElement('div');
+            title.innerText = 'Status False';
+            title.style.background = 'red';
+            document.body.appendChild(title);
+            userSort(newArr);
+        }
+    }
+    let moreTwentyNine = document.createElement('input');
+    moreTwentyNine.type = 'checkbox';
+    moreTwentyNine.title = '> 29';
+    moreTwentyNine.style.display = 'block';
+    moreTwentyNine.onchange = () => {
+        if (moreTwentyNine.checked) {
+            newArr = newArr.filter((user) => user.age > 29);
+            let title = document.createElement('div');
+            title.innerText = 'Age is more than 29';
+            title.style.background = 'yellow';
+            document.body.appendChild(title);
+            userSort(newArr);
+        }
+    }
+    let cityKyiv = document.createElement('input');
+    cityKyiv.type = 'checkbox';
+    cityKyiv.title = 'city Kyiv';
+    cityKyiv.style.display = 'block';
+    cityKyiv.onchange = () => {
+        if (cityKyiv.checked) {
+            newArr = newArr.filter((user) => user.address.city === 'Kyiv');
+            let title = document.createElement('div');
+            title.innerText = 'City -> Kiyv';
+            title.style.background = 'green';
+            document.body.appendChild(title);
+            userSort(newArr);
+        }
     }
 
+    forma.appendChild(checkFalse);
+    forma.appendChild(moreTwentyNine);
+    forma.appendChild(cityKyiv);
+
+    document.body.appendChild(forma);
+    userSort(users);
+
 }
+filterArray(usersWithAddress);
 
 // *****(Прям овердоз с рекурсией) Создать функцию которая принимает какой-либо элемент DOM-структуры .Функция создает в боди 2 кнопки (назад/вперед)
 // при нажатии вперед, вы переходите к дочернему элементу, при еще одном нажатии на "вперед", вы переходите к следующему дочернему элементу (лежащему на одном уровне)
