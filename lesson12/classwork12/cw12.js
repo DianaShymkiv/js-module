@@ -82,7 +82,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                 } else {
                     divC.hidden = true;
                 }
-                console.log(counter)
+                // console.log(counter);
                 counter++;
 
             })
