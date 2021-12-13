@@ -36,6 +36,8 @@
 // https://jsonplaceholder.typicode.com/comments
 
 let wrap = document.createElement("div");
+wrap.style.display = 'flex';
+wrap.style.flexWrap = 'wrap';
 
 fetch('https://jsonplaceholder.typicode.com/comments')
     .then(response => response.json())
@@ -45,7 +47,8 @@ fetch('https://jsonplaceholder.typicode.com/comments')
             divComment.style.border = '1px solid lightGrey';
             divComment.style.borderRadius = '10px';
             divComment.style.padding = '10px';
-            divComment.style.margin = '20px';
+            divComment.style.margin = '10px';
+            divComment.style.width = '17%';
 
             divComment.onmouseover = (e) => {
                 divComment.style.backgroundColor = '#f6f6f6';
