@@ -83,6 +83,8 @@ mainWrap.style.display = 'flex';
 mainWrap.style.flexDirection = 'column';
 mainWrap.style.alignItems = 'center';
 mainWrap.style.marginTop = '100px';
+mainWrap.style.height = '100vh';
+mainWrap.style.background = 'linear-gradient(#fff, #d2d1d1)';
 
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
@@ -95,7 +97,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
         wrap.style.width = '33%';
         wrap.style.margin = '15px';
         wrap.style.padding = '20px 0 20px 50px';
-        wrap.style.border = '1px solid darkGrey';
+        // wrap.style.border = '1px solid darkGrey';
         wrap.style.borderRadius = '10px';
         wrap.style.boxShadow = '6px 8px 10px 0 darkGrey';
         wrap.style.background = 'linear-gradient( 160deg, #fff 40%, #EEEEEEFF )';
@@ -113,8 +115,8 @@ fetch('https://jsonplaceholder.typicode.com/users')
         }
 
         mainWrap.appendChild(wrap);
-        buttons.append(buttonBack,buttonPost)
+        buttons.append(buttonBack, buttonPost)
         mainWrap.appendChild(buttons);
-        document.body.appendChild(mainWrap);
     })
+document.body.appendChild(mainWrap);
 

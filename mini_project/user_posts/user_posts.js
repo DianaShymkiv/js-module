@@ -65,6 +65,8 @@ buttonBackToUsers.onclick = () => {
 
 let mainWrap = document.createElement('div');
 mainWrap.style.display = 'flex';
+mainWrap.style.background = 'linear-gradient(#fff, #d2d1d1)';
+mainWrap.style.height = '100vh';
 mainWrap.style.flexDirection = 'column';
 mainWrap.style.alignItems = 'center';
 mainWrap.style.marginTop = '100px';
@@ -88,7 +90,7 @@ fetch('https://jsonplaceholder.typicode.com/users/' + userId + '/posts')
             divPost.style.height = '150px';
             divPost.style.margin = '15px';
             divPost.style.padding = '20px';
-            divPost.style.border = '1px solid darkGrey';
+            // divPost.style.border = '1px solid darkGrey';
             divPost.style.borderRadius = '10px';
             divPost.style.display = 'flex';
             divPost.style.textAlign = 'center';
@@ -144,7 +146,7 @@ fetch('https://jsonplaceholder.typicode.com/users/' + userId + '/posts')
         }
 
         mainWrap.appendChild(postWrap);
-        buttons.append(buttonBack,buttonBackToUsers);
+        buttons.append(buttonBack, buttonBackToUsers);
         mainWrap.appendChild(buttons);
         document.body.appendChild(mainWrap);
     })

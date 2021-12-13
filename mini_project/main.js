@@ -6,6 +6,8 @@
 let wrap = document.createElement('div');
 wrap.style.display = 'flex';
 wrap.style.justifyContent = 'center';
+wrap.style.background = 'linear-gradient(#fff, #d2d1d1)';
+
 
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
@@ -21,10 +23,11 @@ fetch('https://jsonplaceholder.typicode.com/users')
             divUser.innerHTML = `
             <h3>ID: ${user.id}</h3>
             <h2>Name: ${user.name}</h2>`;
+
             divUser.style.width = '33%';
             divUser.style.margin = '15px';
             divUser.style.padding = '20px';
-            divUser.style.border = '1px solid darkGrey';
+            // divUser.style.border = '1px solid darkGrey';
             divUser.style.borderRadius = '10px';
             divUser.style.display = 'flex';
             divUser.style.alignItems = 'center';
