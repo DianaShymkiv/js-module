@@ -24,7 +24,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             <h3>ID: ${user.id}</h3>
             <h2>Name: ${user.name}</h2>`;
 
-            divUser.style.width = '33%';
+            divUser.style.width = '34%';
             divUser.style.margin = '15px';
             divUser.style.padding = '20px';
             // divUser.style.border = '1px solid darkGrey';
@@ -52,6 +52,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             buttonDetails.style.borderRadius = '4px';
             buttonDetails.style.width = '70px';
             buttonDetails.style.height = '40px';
+            buttonDetails.style.fontWeight = 'bold';
             buttonDetails.style.background = 'linear-gradient( 160deg,#fff 10%,#EEEEEEFF 40%, #b7b7b7 )';
 
             buttonDetails.onclick = () => {
