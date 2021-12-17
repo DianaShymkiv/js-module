@@ -19,6 +19,8 @@ for (const product of products) {
     divProduct.style.padding = '10px';
 
     let img = document.createElement('img');
+    img.style.width = '200px';
+    img.style.height = '200px';
     img.src = `${product.image}`;
 
     let title = document.createElement('h2');

@@ -75,6 +75,11 @@ localStorage.setItem('productList',JSON.stringify(listArr));
 button.onclick = (ev) => {
     ev.preventDefault();
 
+    form.title.value = '';
+    form.count.value = '';
+    form.price.value = '';
+    form.image.value = '';
+
     let productList = {
         title : form.title.value,
         count: form.count.value,
