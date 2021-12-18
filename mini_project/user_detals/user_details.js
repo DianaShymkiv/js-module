@@ -5,7 +5,8 @@
 // 6 Каждому посту добавить кнопку/ссылку, при клике на которую происходит переход на страницу post-details.html, которая имеет детальную информацию про текущий пост.
 
 let buttons = document.createElement('div');
-buttons.style.marginTop = '20px';
+buttons.setAttribute('class', 'buttons');
+// buttons.style.marginTop = '20px';
 
 let buttonBack = document.createElement('button');
 buttonBack.innerText = 'Back to users';
@@ -72,8 +73,9 @@ buttonPost.onclick = () => {
 function userDetails(user, wrapper) {
     for (const key in user) {
         let div = document.createElement('div');
-        div.style.marginBottom = '5px';
-        div.style.fontSize = '20px';
+        div.setAttribute('class', 'div');
+        // div.style.marginBottom = '5px';
+        // div.style.fontSize = '20px';
         // div.style.fontWeight = 'bold';
 
         if (typeof user[key] === 'object') {
@@ -87,12 +89,13 @@ function userDetails(user, wrapper) {
 }
 
 let mainWrap = document.createElement('div');
-mainWrap.style.display = 'flex';
-mainWrap.style.flexDirection = 'column';
-mainWrap.style.alignItems = 'center';
-mainWrap.style.marginTop = '100px';
-mainWrap.style.height = '100vh';
-mainWrap.style.background = 'linear-gradient(#fff, #d2d1d1)';
+mainWrap.setAttribute('class', 'mainWrap');
+// mainWrap.style.display = 'flex';
+// mainWrap.style.flexDirection = 'column';
+// mainWrap.style.alignItems = 'center';
+// mainWrap.style.marginTop = '100px';
+// mainWrap.style.height = '100vh';
+// mainWrap.style.background = 'linear-gradient(#fff, #d2d1d1)';
 
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())

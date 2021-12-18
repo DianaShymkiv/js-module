@@ -4,23 +4,25 @@
 // 3 Добавить каждому блоку кнопку/ссылку , при клике на которую происходит переход на страницу user-details.html, которая имеет детальную информацию про объект на который кликнули
 
 let wrap = document.createElement('div');
-wrap.style.display = 'flex';
-wrap.style.justifyContent = 'center';
-wrap.style.background = 'linear-gradient(#fff, #d2d1d1)';
+wrap.setAttribute('class', 'wrap');
+// wrap.style.display = 'flex';
+// wrap.style.justifyContent = 'center';
+// wrap.style.background = 'linear-gradient(#fff, #d2d1d1)';
 
 
 fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(users => {
         let userWrap = document.createElement('div');
-        userWrap.style.display = 'flex';
-        userWrap.style.justifyContent = 'center';
-        userWrap.style.flexWrap = 'wrap';
-        userWrap.style.width = '1000px';
+        userWrap.setAttribute('class', 'userWrap');
+        // userWrap.style.display = 'flex';
+        // userWrap.style.justifyContent = 'center';
+        // userWrap.style.flexWrap = 'wrap';
+        // userWrap.style.width = '1000px';
 
         for (const user of users) {
             let divUser = document.createElement('div');
-            divUser.setAttribute('class', 'div');
+            divUser.setAttribute('class', 'divUser');
             divUser.innerHTML = `
             <h3>ID: ${user.id}</h3>
             <h2>Name: ${user.name}</h2>`;

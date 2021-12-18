@@ -3,7 +3,8 @@
 // 8 Ниже информации про пост, вывести все комментарии текущего поста (эндпоинт для получения информации - https://jsonplaceholder.typicode.com/posts/POST_ID/comments)
 
 let buttons = document.createElement('div');
-buttons.style.marginTop = '20px';
+buttons.setAttribute('class', 'buttons');
+// buttons.style.marginTop = '20px';
 
 let buttonBack = document.createElement('button');
 buttonBack.innerText = 'Back';

@@ -13,7 +13,20 @@
             /*font-family: 'Poppins', sans-serif;*/
         }
 
-        .div {
+        .wrap {
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(#fff, #d2d1d1);
+        }
+
+        .userWrap {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 1000px;
+        }
+
+        .divUser {
             width: 34%;
             margin: 15px;
             padding: 20px;
@@ -26,7 +39,7 @@
             background: linear-gradient(160deg, #fff 40%, #EEEEEEFF);
         }
 
-        div:hover {
+        .divUser:hover {
             background: linear-gradient(160deg, #f1f1f1 70%, #f6f6f6);
             transition: .3s;
         }
@@ -42,7 +55,7 @@
             background: linear-gradient(160deg, #fff 10%, #EEEEEEFF 40%, #b7b7b7);
         }
 
-        button:hover {
+        .button:hover {
             background: linear-gradient(160deg, #EEEEEEFF 30%, lightGrey, #A1A1A1FF);
             transition: .3s;
             height: 50px;

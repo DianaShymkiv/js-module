@@ -3,7 +3,8 @@
 // 6 Каждому посту добавить кнопку/ссылку, при клике на которую происходит переход на страницу post-details.html, которая имеет детальную информацию про текущий пост.
 
 let buttons = document.createElement('div');
-buttons.style.marginTop = '20px';
+buttons.setAttribute('class', 'buttons');
+// buttons.style.marginTop = '20px';
 
 let buttonBack = document.createElement('button');
 buttonBack.innerText = 'Back';
@@ -68,12 +69,13 @@ buttonBackToUsers.onclick = () => {
 }
 
 let mainWrap = document.createElement('div');
-mainWrap.style.display = 'flex';
-mainWrap.style.background = 'linear-gradient(#fff, #d2d1d1)';
-mainWrap.style.height = '100vh';
-mainWrap.style.flexDirection = 'column';
-mainWrap.style.alignItems = 'center';
-mainWrap.style.marginTop = '100px';
+mainWrap.setAttribute('class', 'mainWrap');
+// mainWrap.style.display = 'flex';
+// mainWrap.style.background = 'linear-gradient(#fff, #d2d1d1)';
+// mainWrap.style.height = '100vh';
+// mainWrap.style.flexDirection = 'column';
+// mainWrap.style.alignItems = 'center';
+// mainWrap.style.marginTop = '100px';
 
 let userId = localStorage.getItem('user_id');
 
@@ -82,9 +84,10 @@ fetch('https://jsonplaceholder.typicode.com/users/' + userId + '/posts')
     .then(posts => {
 
         let postWrap = document.createElement('div');
-        postWrap.style.display = 'flex';
-        postWrap.style.justifyContent = 'center';
-        postWrap.style.flexWrap = 'wrap';
+        postWrap.setAttribute('class', 'postWrap');
+        // postWrap.style.display = 'flex';
+        // postWrap.style.justifyContent = 'center';
+        // postWrap.style.flexWrap = 'wrap';
 
         for (const post of posts) {
 

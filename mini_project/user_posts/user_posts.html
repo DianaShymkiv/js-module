@@ -13,6 +13,10 @@
             /*font-family: 'Poppins', sans-serif;*/
         }
 
+        .buttons {
+            margin-top: 20px;
+        }
+
         .button {
             box-shadow: 3px 4px 5px 1px darkGrey;
             border: .1px solid lightGrey;
@@ -25,7 +29,7 @@
             background: linear-gradient(160deg, #fff 10%, #EEEEEEFF 40%, #b7b7b7);
         }
 
-        button:hover {
+        .button:hover {
             background: linear-gradient(160deg, #EEEEEEFF 30%, lightGrey, #A1A1A1FF);
             transition: .3s;
             height: 50px;
@@ -48,9 +52,24 @@
             background: linear-gradient(160deg, #fff 40%, #EEEEEEFF);
         }
 
-        div:hover {
+        .div:hover {
             background: linear-gradient(160deg, #f1f1f1 70%, #f6f6f6);
             transition: .3s;
+        }
+
+        .mainWrap {
+            display: flex;
+            background: linear-gradient(#fff, #d2d1d1);
+            height: 100vh;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        .postWrap {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
     </style>
