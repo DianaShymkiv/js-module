@@ -161,3 +161,4 @@ fetch('https://jsonplaceholder.typicode.com/users/' + userId + '/posts')
         mainWrap.appendChild(buttons);
         document.body.appendChild(mainWrap);
     })
+

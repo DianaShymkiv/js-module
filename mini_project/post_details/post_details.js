@@ -179,4 +179,3 @@ fetch('https://jsonplaceholder.typicode.com/posts/' + postId + '/comments')
 
 document.body.appendChild(mainWrap);
 
-
