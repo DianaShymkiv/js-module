@@ -148,7 +148,7 @@ fetch('https://jsonplaceholder.typicode.com/users/' + userId + '/posts')
             // }
 
             buttonPost.onclick = () => {
-                location.pathname = '/js-module/mini_project/post_details/post_details.html';
+                location.href = '../post_details/post_details.html';
                 localStorage.setItem('post_id', post.id);
             }
 

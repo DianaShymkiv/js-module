@@ -67,7 +67,7 @@ buttonPost.setAttribute('class', 'button');
 // };
 
 buttonPost.onclick = () => {
-    location.pathname = '/js-module/mini_project/user_posts/user_posts.html';
+    location.href = '../user_posts/user_posts.html';
 }
 
 function userDetails(user, wrapper) {

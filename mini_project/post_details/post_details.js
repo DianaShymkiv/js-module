@@ -65,7 +65,7 @@ buttonBackToUsers.setAttribute('class', 'button');
 // };
 
 buttonBackToUsers.onclick = () => {
-    location.pathname = '/js-module/mini_project/index.html';
+    location.href = '../index.html';
 }
 
 let mainWrap = document.createElement('div');

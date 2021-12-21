@@ -60,7 +60,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             // buttonDetails.style.background = 'linear-gradient( 160deg,#fff 10%,#EEEEEEFF 40%, #b7b7b7 )';
 
             buttonDetails.onclick = () => {
-                location.pathname = '/js-module/mini_project/user_detals/user_details.html';
+                location.href = 'user_detals/user_details.html';
                 localStorage.setItem('user_id', user.id);
             }
 
